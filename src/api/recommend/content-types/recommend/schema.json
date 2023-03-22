@@ -32,6 +32,14 @@
       "target": "api::post.post",
       "inversedBy": "recommends"
     },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "comment",
+        "chosen",
+        "viewed-job"
+      ]
+    },
     "files": {
       "allowedTypes": [
         "images",

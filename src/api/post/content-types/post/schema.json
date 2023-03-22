@@ -33,11 +33,31 @@
       "target": "api::category.category",
       "inversedBy": "post"
     },
-    "project": {
+    "workType": {
+      "type": "enumeration",
+      "enum": [
+        "Bán thời gian",
+        "Toàn thời gian"
+      ]
+    },
+    "payType": {
+      "type": "enumeration",
+      "enum": [
+        "Trả theo dự dán",
+        "Trả theo giờ",
+        "Trả theo tháng"
+      ]
+    },
+    "addresses": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::project.project",
-      "inversedBy": "post"
+      "relation": "oneToMany",
+      "target": "api::address.address"
+    },
+    "budgetMin": {
+      "type": "integer"
+    },
+    "budgetMax": {
+      "type": "integer"
     },
     "profile": {
       "type": "relation",

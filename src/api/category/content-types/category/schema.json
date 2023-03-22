@@ -21,6 +21,12 @@
       "target": "api::post.post",
       "mappedBy": "category"
     },
+    "self-services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::self-service.self-service",
+      "mappedBy": "services"
+    },
     "parent_ids": {
       "type": "relation",
       "relation": "oneToOne",

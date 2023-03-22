@@ -56,6 +56,9 @@
       "default": false,
       "configurable": false
     },
+    "website": {
+      "type": "string"
+    },
     "role": {
       "type": "relation",
       "relation": "manyToOne",
@@ -112,7 +115,7 @@
     },
     "profile": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::profile.profile",
       "inversedBy": "users_permissions_users"
     },

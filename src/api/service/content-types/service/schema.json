@@ -21,6 +21,12 @@
       "target": "api::post.post",
       "mappedBy": "services"
     },
+    "self-services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::self-service.self-service",
+      "mappedBy": "services"
+    },
     "users": {
       "type": "relation",
       "relation": "manyToMany",
