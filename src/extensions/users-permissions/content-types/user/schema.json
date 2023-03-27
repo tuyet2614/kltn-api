@@ -131,10 +131,13 @@
       "target": "api::answer.answer",
       "inversedBy": "users_permissions_users"
     },
-    "addresses": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::address.address"
+    "city": {
+      "type": "string"
+      
+    },
+    "location": {
+      "type": "string"
+      
     },
     "projects": {
       "type": "relation",

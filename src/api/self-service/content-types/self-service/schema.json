@@ -15,12 +15,7 @@
     "name": {
       "type": "string"
     },
-    "category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category",
-      "inversedBy": "self-services"
-    },
+    
     "services": {
       "type": "relation",
       "relation": "manyToMany",
@@ -48,6 +43,9 @@
     "deadline": {
       "type": "integer"
     },
+    "type-deadline": {
+      "type": "string"
+    },
     "description": {
       "type": "json"
     },
@@ -56,16 +54,40 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
     },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     
     "status": {
       "type": "enumeration",
       "enum": [
-        "comment",
-        "chosen",
-        "viewed-job"
+        "sell",
+        "confirm",
+        "order",
+        "trans",
+        "finish",
+        "close"
       ]
     },
-    "files": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "video" : {
       "allowedTypes": [
         "images",
         "files",

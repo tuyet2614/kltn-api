@@ -21,6 +21,7 @@
     "status": {
       "type": "enumeration",
       "enum": [
+        "reject",
         "draft",
         "requested",
         "pendind",
@@ -103,6 +104,7 @@
         "audios"
       ]
     },
+    
     "idRecommendRecieved": {
       "type": "biginteger"
     }

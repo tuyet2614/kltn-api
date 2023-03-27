@@ -27,9 +27,7 @@
     "work_profile": {
       "type": "json"
     },
-    "service_profile": {
-      "type": "json"
-    },
+    
     "capacity_profile": {
       "type": "json"
     },
@@ -57,6 +55,17 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::service.service"
+    },
+    "files": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "categories": {
       "type": "relation",
