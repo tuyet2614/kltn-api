@@ -16,6 +16,8 @@
     "@strapi/provider-email-sendgrid": "^4.5.4",
     "@strapi/strapi": "4.5.3",
     "mysql": "2.18.1",
+    "pg": "^8.10.0",
+    "pg-connection-string": "^2.5.0",
     "socket.io": "^4.5.4",
     "strapi-plugin-populate-deep": "^2.0.0"
   },
