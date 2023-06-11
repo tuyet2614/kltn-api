@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "my_extensions",
+  "info": {
+    "singularName": "my-extension",
+    "pluralName": "my-extensions",
+    "displayName": "my-extension"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
