@@ -70,8 +70,14 @@ module.exports = createCoreController("api::my-extension.my-extension", ({ strap
         if (!u) return { status: '400', message: 'User not existing. Please check your email address!' }
         let _validUntil = new Date(r.valid_until)
         let today = new Date()
-        if (_validUntil > today && !r.activated_date) {
-          const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg2NDcxNTI4LCJleHAiOjE2ODkwNjM1Mjh9.9_roIAepaRdabvn6TaIuEPL2hww84_G0KMLLfMPL2tc"
+        const emailAdmin = process.env.EMAIL_ADMIN
+        const passwordAdmin = process.env.PASSWORD_ADMIN
+        const userAdmin = await axios.post('http://localhost:1337/admin/login' , {
+          email: emailAdmin,
+          password: passwordAdmin
+        })
+        const token = userAdmin?.data?.data?.token
+        if (_validUntil > today && !r.activated_date && token) {
           entity = await  axios.put(`http://localhost:1337/content-manager/collection-types/plugin::users-permissions.user/${u.id}`, {
             resetPasswordToken: null, password: param.password
           },
