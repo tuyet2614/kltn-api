@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tokens",
+  "info": {
+    "singularName": "token",
+    "pluralName": "tokens",
+    "displayName": "token"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "issue_type": {
+      "type": "string"
+    },
+    "issue_email": {
+      "type": "string"
+    },
+    "issue_subject": {
+      "type": "string"
+    },
+    "valid_until": {
+      "type": "float"
+    },
+    "retry_count": {
+      "type": "integer"
+    },
+    "activated_date": {
+      "type": "float"
+    },
+    "created_by_user": {
+      "type": "string"
+    }
+  }
+}
